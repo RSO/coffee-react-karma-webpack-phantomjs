@@ -1,0 +1,31 @@
+{
+  "name": "karma-test-project",
+  "private": "true",
+  "devDependencies": {
+    "chai": "^3.1.0",
+    "coffee-jsx-loader": "*",
+    "coffee-loader": "*",
+    "coffee-script": "*",
+    "karma": "^0.12.36",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-cjsx-preprocessor": "*",
+    "karma-coffee-preprocessor": "*",
+    "karma-mocha": "*",
+    "karma-phantomjs-launcher": "^0.2.0",
+    "karma-spec-reporter": "*",
+    "karma-webpack": "^1.6.0",
+    "mocha": "*",
+    "node-libs-browser": "*",
+    "phantomjs": "*",
+    "phantomjs-polyfill": "0.0.1",
+    "react": "*",
+    "requirejs": "*",
+    "rewire": "^2.3.4",
+    "rewire-webpack": "^1.0.0",
+    "webpack": "*"
+  },
+  "scripts": {
+    "test": "karma start"
+  }
+}
