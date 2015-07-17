@@ -4,7 +4,7 @@ TestUtils = React.addons.TestUtils
 ReactMock = require './support/react_mock'
 
 Component = rewire '../component'
-Component.__set__ '../link', {}
+Component.__set__ 'Link', './link', {}
 
 describe 'Component', ->
   it 'mocks the Link component', ->
