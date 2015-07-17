@@ -4,7 +4,9 @@ TestUtils = React.addons.TestUtils
 ReactMock = require './support/react_mock'
 
 Component = rewire '../component'
-Component.__set__ 'Link', './link', {}
+Component.__set__ 'Link', React.createClass
+  render: ->
+    React.createElement 'div'
 
 describe 'Component', ->
   it 'mocks the Link component', ->
