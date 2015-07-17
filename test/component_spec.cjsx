@@ -4,9 +4,7 @@ TestUtils = React.addons.TestUtils
 ReactMock = require './support/react_mock'
 
 Component = rewire '../component'
-Component.__set__ 'Link', React.createClass
-  render: ->
-    React.createElement 'div'
+Component.__set__ 'Link', ReactMock
 
 describe 'Component', ->
   it 'mocks the Link component', ->
@@ -14,4 +12,5 @@ describe 'Component', ->
     expect(true).to.eq true
 
     expect(TestUtils.scryRenderedDOMComponentsWithTag(component, 'a')).to.have.length 0
+    TestUtils.findRenderedDOMComponentWithClass component, 'spec-mock'
 
