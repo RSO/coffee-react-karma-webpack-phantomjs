@@ -1,6 +1,6 @@
 React = require 'react/addons'
 TestUtils = React.addons.TestUtils
-Link = require '../link'
+Link = require '../src/link'
 
 describe 'Link', ->
   it 'renders an a tag', ->

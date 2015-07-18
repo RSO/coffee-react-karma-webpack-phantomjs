@@ -3,7 +3,7 @@ mockComponent = require './support/mock_component'
 React = require 'react/addons'
 TestUtils = React.addons.TestUtils
 
-Component = rewire '../component'
+Component = rewire '../src/component'
 mockComponent Component, 'Link'
 
 describe 'Component', ->
