@@ -1,10 +1,10 @@
 rewire = require 'rewire'
+mockComponent = require './support/mock_component'
 React = require 'react/addons'
 TestUtils = React.addons.TestUtils
-ReactMock = require './support/react_mock'
 
 Component = rewire '../component'
-Component.__set__ 'Link', ReactMock
+mockComponent Component, 'Link'
 
 describe 'Component', ->
   it 'mocks the Link component', ->
