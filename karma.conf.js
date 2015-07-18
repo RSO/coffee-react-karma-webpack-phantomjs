@@ -1,5 +1,5 @@
 // Karma configuration
-var RewirePlugin = require('rewire-webpack');
+var webpackConfig = require('./webpack.config');
 
 module.exports = function(config) {
   config.set({
@@ -25,20 +25,7 @@ module.exports = function(config) {
 	},
 
 
-	webpack: {
-		resolve: {
-      extensions: ['', '.coffee', '.cjsx', '.js', '.coffee.cjsx']
-		},
-		module: {
-			loaders: [
-				{ test: /\.coffee$/, loader: "coffee-loader" },
-        { test: /\.cjsx$/, loader: "coffee-jsx-loader" }
-			]
-		},
-    plugins: [
-      new RewirePlugin()
-    ]
-	},
+	webpack: webpackConfig,
 
 
 	webpackMiddleware: {
