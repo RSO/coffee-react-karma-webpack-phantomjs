@@ -34,7 +34,13 @@ module.exports = function(config) {
 
   // test results reporter to use
   // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
-  reporters: ['progress'],
+  reporters: ['progress', 'json'],
+
+
+  jsonReporter: {
+    stdout: false,
+    outputFile: 'tmp/test_result.json'
+  },
 
 
   // web server port
