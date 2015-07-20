@@ -9,13 +9,12 @@ module.exports = function(config) {
 
 
 	// frameworks to use
-	frameworks: ['mocha', 'chai'],
+	frameworks: ['mocha', 'chai', 'sinon'],
 
 
 	// list of files / patterns to load in the browser
 	files: [
-    './node_modules/phantomjs-polyfill/bind-polyfill.js',
-	  'test/*_spec*'
+	  'test/index.coffee'
 	],
 
 
@@ -82,7 +81,8 @@ module.exports = function(config) {
     require("karma-chai"),
 		require("karma-phantomjs-launcher"),
 		require("karma-chrome-launcher"),
-		require("karma-webpack")
+		require("karma-webpack"),
+    require("karma-sinon")
 	]
   });
 };
