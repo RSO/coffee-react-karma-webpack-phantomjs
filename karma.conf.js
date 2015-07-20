@@ -82,7 +82,8 @@ module.exports = function(config) {
 		require("karma-phantomjs-launcher"),
 		require("karma-chrome-launcher"),
 		require("karma-webpack"),
-    require("karma-sinon")
+    require("karma-sinon"),
+    require("karma-json-reporter")
 	]
   });
 };

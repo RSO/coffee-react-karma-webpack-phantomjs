@@ -11,6 +11,7 @@
     "karma-chrome-launcher": "^0.2.0",
     "karma-cjsx-preprocessor": "^1.0.0",
     "karma-coffee-preprocessor": "^0.3.0",
+    "karma-json-reporter": "^1.1.0",
     "karma-mocha": "^0.2.0",
     "karma-phantomjs-launcher": "^0.2.0",
     "karma-sinon": "^1.0.4",
@@ -25,6 +26,7 @@
     "webpack": "^1.10.1"
   },
   "scripts": {
-    "test": "karma start"
+    "test": "karma start",
+    "test-arcanist": "karma start --reporters json --single-run --no-colors --log-level disable"
   }
 }
