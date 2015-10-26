@@ -34,7 +34,7 @@ module.exports = function(config) {
 
   // test results reporter to use
   // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
-  reporters: ['progress', 'json'],
+  reporters: ['story'],
 
 
   jsonReporter: {
@@ -77,19 +77,6 @@ module.exports = function(config) {
 
   // Continuous Integration mode
   // if true, it capture browsers, run tests and exit
-  singleRun: false,
-
-
-  // List plugins explicitly, since autoloading karma-webpack
-  // won't work here
-  plugins: [
-    require("karma-mocha"),
-    require("karma-chai"),
-    require("karma-phantomjs-launcher"),
-    require("karma-chrome-launcher"),
-    require("karma-webpack"),
-    require("karma-sinon"),
-    require("karma-json-reporter")
-  ]
+  singleRun: false
   });
 };

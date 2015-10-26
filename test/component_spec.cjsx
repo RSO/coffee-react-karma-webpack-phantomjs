@@ -5,12 +5,9 @@ TestUtils = React.addons.TestUtils
 
 Component = rewire '../src/component'
 mockComponent Component, 'Link'
+Component.__set__
+  constants: 'set_in_components_spec'
 
 describe 'Component', ->
   it 'mocks the Link component', ->
     component = TestUtils.renderIntoDocument <Component />
-    expect(true).to.eq true
-
-    expect(TestUtils.scryRenderedDOMComponentsWithTag(component, 'a')).to.have.length 0
-    TestUtils.findRenderedDOMComponentWithClass component, 'spec-mock'
-
